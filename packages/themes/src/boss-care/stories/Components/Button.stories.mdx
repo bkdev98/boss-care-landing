@@ -1,0 +1,143 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import Button from '@quocs/common/src/components/Button';
+
+import Theme from '../../index';
+
+<Meta title="Themes|boss-care/Components/Button" component={Button} />
+
+# Button
+
+Buttons allow users to take actions, and make choices, with a single tap.
+They are also prepared to working as a custom urls or route links.
+
+```js
+import Button from '@quocs/common/src/components/Button';
+
+<Button color="primary">Primary</Button>;
+```
+
+### Basic
+
+<Preview>
+  <Story name="Basic">
+    <Theme>
+      <Button>Default</Button>
+      <Button color="primary">Primary</Button>
+      <Button color="secondary">Secondary</Button>
+      <Button color="tertiary">Tertiary</Button>
+      <Button color="quaternary">Quaternary</Button>
+    </Theme>
+  </Story>
+</Preview>
+
+### Variants
+
+<Preview>
+  <Story name="Variants">
+    <Theme>
+      <Button variant="primary">Primary</Button>
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="tertiary">Tertiary</Button>
+      <Button variant="quaternary">Quaternary</Button>
+    </Theme>
+  </Story>
+</Preview>
+
+### Outlined variants
+
+<Preview>
+  <Story name="Outlined">
+    <Theme>
+      <Button outlined variant="primary">
+        Primary
+      </Button>
+      <Button outlined variant="secondary">
+        Secondary
+      </Button>
+      <Button outlined variant="tertiary">
+        Tertiary
+      </Button>
+      <Button outlined variant="quaternary">
+        Quaternary
+      </Button>
+    </Theme>
+  </Story>
+</Preview>
+
+### Flat
+
+<Preview>
+  <Story name="Flat">
+    <Theme>
+      <Button flat variant="primary">
+        Primary
+      </Button>
+      <Button flat variant="secondary">
+        Secondary
+      </Button>
+      <Button flat variant="tertiary">
+        Tertiary
+      </Button>
+      <Button flat variant="quaternary">
+        Quaternary
+      </Button>
+    </Theme>
+  </Story>
+</Preview>
+
+### Mixed
+
+<Preview>
+  <Story name="Mixed">
+    <Theme>
+      <Button flat outlined variant="primary">
+        Primary
+      </Button>
+      <Button flat outlined variant="secondary">
+        Secondary
+      </Button>
+      <Button flat outlined variant="tertiary">
+        Tertiary
+      </Button>
+      <Button flat outlined variant="quaternary">
+        Quaternary
+      </Button>
+    </Theme>
+  </Story>
+</Preview>
+
+### Sizes
+
+<Preview>
+  <Story name="Sizes">
+    <Theme>
+      <Button size="small" variant="primary">
+        Small
+      </Button>
+      <Button size="normal" variant="primary">
+        Normal
+      </Button>
+      <Button size="large" variant="primary">
+        Large
+      </Button>
+    </Theme>
+  </Story>
+</Preview>
+
+### Customizing
+
+<Preview>
+  <Story name="Customizing">
+    <Theme>
+      <Button as="a" href="https://quocs.com" variant="primary">
+        This is a link button
+      </Button>
+    </Theme>
+  </Story>
+</Preview>
+
+## Props
+
+It supports also styled-system props.
+
+<Props of={Button} />

@@ -1,0 +1,46 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+
+import Theme from '../../index';
+
+import Avatar from '../../components/Avatar';
+
+import male from '../../assets/clients/photo-male.jpg';
+import malex2 from '../../assets/clients/photo-male@2x.jpg';
+import female from '../../assets/clients/photo-female.jpg';
+import femalex2 from '../../assets/clients/photo-female@2x.jpg';
+
+<Meta title="Themes|boss-care/Components/Avatar" component={Avatar} />
+
+# Avatar
+
+Avatar is a simple styled img element.
+
+```js
+import Avatar from '@quocs/common/src/components/Avatar';
+
+<Avatar src="path to image" />;
+```
+
+### Default
+
+<Preview>
+  <Story name="Default">
+    <Theme>
+      <Avatar src={male} srcSet={`${male} 1x, ${malex2} 2x`} />
+    </Theme>
+  </Story>
+</Preview>
+
+### Fancy
+
+<Preview>
+  <Story name="Fancy">
+    <Theme>
+      <Avatar fancy src={female} srcSet={`${female} 1x, ${femalex2} 2x`} />
+    </Theme>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={Avatar} />

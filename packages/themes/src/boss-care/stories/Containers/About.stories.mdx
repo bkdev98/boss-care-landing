@@ -1,0 +1,48 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+
+import About from '@quocs/themes/src/boss-care/containers/About';
+
+import Theme from '../../index';
+
+<Meta title="Themes|boss-care/Containers/About" component={About} />
+
+# About
+
+## Version A
+
+<Preview>
+  <Story name="Version A">
+    <Theme>
+      <About />
+    </Theme>
+  </Story>
+</Preview>
+
+## Version B
+
+Restyled using styled props.
+
+<Preview>
+  <Story name="Version B">
+    <Theme>
+      <About
+        CardProps={{
+          ...About.defaultProps.CardProps,
+          background: 'none',
+          p: 0,
+          boxShadow: 'none',
+        }}
+        FeaturesGridProps={{
+          ...About.defaultProps.FeaturesGridProps,
+          width: 1110,
+          mx: 'auto',
+          gridGap: '90px',
+        }}
+      />
+    </Theme>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={About} />

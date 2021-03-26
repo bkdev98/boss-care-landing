@@ -1,0 +1,61 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+
+import Welcome from '@quocs/themes/src/boss-care/containers/Welcome';
+
+import Theme from '../../index';
+import phoneImg from '../../assets/Phones-B.png';
+import phoneImg2x from '../../assets/Phones-B@2x.png';
+import Liquid from '../../components/Liquids/C';
+
+<Meta title="Themes|boss-care/Containers/Welcome" component={Welcome} />
+
+# Welcome
+
+## Version A
+
+<Preview>
+  <Story name="Version A">
+    <Theme>
+      <Welcome />
+    </Theme>
+  </Story>
+</Preview>
+
+## Version B
+
+Restyled using styled props.
+
+<Preview>
+  <Story name="Version B">
+    <Theme>
+      <Welcome
+        PhoneImgProps={{
+          ...Welcome.defaultProps.PhoneImgProps,
+          src: phoneImg,
+          srcSet: `${phoneImg} 1x, ${phoneImg2x} 2x`,
+          width: '193.8622754491%',
+          left: '-68.8622754491%',
+          top: '-9.4527363184%',
+        }}
+        WrapperProps={{
+          overflow: 'hidden',
+          marginBottom: {
+            _: -90,
+            lg: -120,
+          },
+        }}
+        LiquidComponent={Liquid}
+        LiquidProps={{
+          ...Welcome.defaultProps.LiquidProps,
+          width: '172.3053892216%',
+          left: 0,
+          top: 0,
+        }}
+      />
+    </Theme>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={Welcome} />

@@ -1,0 +1,105 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+
+import Grid from '@quocs/common/src/components/Grid';
+import Box from '@quocs/common/src/components/Box';
+
+import Theme, { theme } from '../../index';
+
+<Meta title="Themes|boss-care/System/Palette" />
+
+# Palette
+Convey meaning through color with a handful of color utility classes.
+
+## Colors
+
+<Preview>
+  <Theme>
+    <Grid gridTemplateColumns="repeat(4, 1fr)" gridGap={16}>
+      <Box bg="primary" height={150} />
+      <Box bg="secondary" height={150} />
+      <Box bg="tertiary" height={150} />
+      <Box bg="quaternary" height={150} />
+      <Box backgroundImage={theme.colors.gradients.primary} height={150} />
+      <Box backgroundImage={theme.colors.gradients.secondary} height={150} />
+      <Box backgroundImage={theme.colors.gradients.tertiary} height={150} />
+      <Box backgroundImage={theme.colors.gradients.quaternary} height={150} />
+      <Box>
+        Primary
+        <br />
+        <small>{theme.colors.primary}</small>
+      </Box>
+      <Box>
+        Secondary
+        <br />
+        <small>{theme.colors.secondary}</small>
+      </Box>
+      <Box>
+        Tertiary
+        <br />
+        <small>{theme.colors.tertiary}</small>
+      </Box>
+      <Box>
+        Quaternary
+        <br />
+        <small>{theme.colors.quaternary}</small>
+      </Box>
+    </Grid>
+  </Theme>
+</Preview>
+
+## Grays
+
+<Preview>
+  <Theme>
+    <Grid gridTemplateColumns="repeat(4, 1fr)" gridGap={16}>
+      <Box>
+        <Box bg="gray.0" height={150} mb={3} />
+        Darkest gray
+        <br />
+        <small>{theme.colors.gray[0]}</small>
+      </Box>
+      <Box>
+        <Box bg="gray.1" height={150} mb={3} />
+        Darker gray
+        <br />
+        <small>{theme.colors.gray[1]}</small>
+      </Box>
+      <Box>
+        <Box bg="gray.2" height={150} mb={3} />
+        Dark gray
+        <br />
+        <small>{theme.colors.gray[2]}</small>
+      </Box>
+      <Box>
+        <Box bg="gray.3" height={150} mb={3} />
+        Gray
+        <br />
+        <small>{theme.colors.gray[3]}</small>
+      </Box>
+      <Box>
+        <Box bg="gray.4" height={150} mb={3} />
+        Light gray
+        <br />
+        <small>{theme.colors.gray[4]}</small>
+      </Box>
+      <Box>
+        <Box bg="gray.5" height={150} mb={3} />
+        Lighter gray
+        <br />
+        <small>{theme.colors.gray[5]}</small>
+      </Box>
+      <Box>
+        <Box bg="gray.6" height={150} mb={3} />
+        Lightest gray
+        <br />
+        <small>{theme.colors.gray[6]}</small>
+      </Box>
+      <Box>
+        <Box bg="gray.7" height={150} mb={3} border="1px solid #EAE8E9" />
+        White
+        <br />
+        <small>{theme.colors.gray[7]}</small>
+      </Box>
+    </Grid>
+  </Theme>
+</Preview>

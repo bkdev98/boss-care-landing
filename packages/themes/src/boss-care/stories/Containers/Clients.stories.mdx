@@ -1,0 +1,75 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+
+import Clients from '@quocs/themes/src/boss-care/containers/Clients';
+
+import Theme from '../../index';
+
+<Meta title="Themes|boss-care/Containers/Clients" component={Clients} />
+
+# Clients
+
+## Version A
+
+<Preview>
+  <Story name="Version A">
+    <Theme>
+      <Clients />
+    </Theme>
+  </Story>
+</Preview>
+
+## Version B
+
+Restyled using styled props.
+
+<Preview>
+  <Story name="Version B">
+    <Theme>
+      <Clients
+        LiquidProps={{
+          display: 'none',
+        }}
+        InnerProps={{
+          ...Clients.defaultProps.InnerProps,
+          ml: 'auto',
+          mr: 'auto',
+        }}
+        TitleProps={{
+          ...Clients.defaultProps.TitleProps,
+          textAlign: 'center',
+          mb: {
+            _: 0,
+            lg: 50,
+          },
+        }}
+        AvatarProps={{
+          ...Clients.defaultProps.AvatarProps,
+          fancy: true,
+          mt: {
+            _: 60,
+            lg: -3,
+          },
+          ml: {
+            _: 'auto',
+            lg: 0,
+          },
+          mr: {
+            _: 'auto',
+            lg: 84,
+          },
+        }}
+        SlideProps={{
+          ...Clients.defaultProps.SlideProps,
+          pb: 4,
+          pt: 60,
+          mx: 'auto',
+          maxWidth: 970,
+        }}
+      />
+    </Theme>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={Clients} />

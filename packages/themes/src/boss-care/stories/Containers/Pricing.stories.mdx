@@ -1,0 +1,156 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+
+import Pricing from '@quocs/themes/src/boss-care/containers/Pricing';
+
+import Theme from '../../index';
+import data from '../../data';
+
+<Meta title="Themes|boss-care/Containers/Pricing" component={Pricing} />
+
+# Pricing
+
+## Version A
+
+<Preview>
+  <Story name="Version A">
+    <Theme>
+      <Pricing />
+    </Theme>
+  </Story>
+</Preview>
+
+## Version B
+
+Restyled using styled props.
+
+<Preview>
+  <Story name="Version B">
+    <Theme>
+      <Pricing
+        useRadios
+        text="Ut commodo suscipit neque vitae suscipit. Mauris congue viverra dolor, vel lobortis elit venenatis vel. Nunc non orci ut mi semper aliquet. Nullam vitae tortor faucibus, vehicula lorem in, convallis mi."
+        GridProps={{
+          gridTemplateAreas: {
+            _: '"caption" "switch" "cards"',
+            lg:
+              '"spacer empty cards spacer2" "spacer caption cards spacer2" "spacer switch cards spacer2" "spacer empty2 cards spacer2"',
+          },
+          gridTemplateRows: {
+            _: 'auto auto auto',
+            lg: '1fr auto auto 1fr',
+          },
+          gridTemplateColumns: {
+            _: '1fr',
+            lg: '1fr 370px 630px 1fr',
+          },
+          gridRowGap: '30px',
+          gridColumnGap: '30px',
+        }}
+        CaptionProps={{
+          ...Pricing.defaultProps.CaptionProps,
+          textAlign: 'left',
+          mr: {
+            _: 'auto',
+            lg: 30,
+          },
+        }}
+        SwitchWrapperProps={{
+          ...Pricing.defaultProps.SwitchWrapperProps,
+          justifyContent: 'flex-start',
+        }}
+        prices={{
+          ...data.pricing.prices,
+          sections: [
+            {
+              title: 'Beginner',
+              price: {
+                a: '$3',
+                b: '$30',
+              },
+              features: [
+                {
+                  text: 'Ut commodo suscipit',
+                  check: true,
+                },
+                {
+                  text: 'Mauris congue viverra',
+                  check: true,
+                },
+                {
+                  text: 'Nunc non orci ut mi',
+                  check: true,
+                },
+                {
+                  text: 'Nullam vitae tortor',
+                  check: true,
+                },
+                {
+                  text: 'Lorem ipsum dolor sit',
+                  check: false,
+                },
+                {
+                  text: 'Fusce quis vestibulum',
+                  check: false,
+                },
+              ],
+              button: {
+                text: 'Choose beginner',
+                ButtonProps: {
+                  as: 'a',
+                  href: 'https://quocs.com',
+                },
+              },
+            },
+            {
+              title: 'Professional',
+              price: {
+                a: '$12',
+                b: '$120',
+              },
+              features: [
+                {
+                  text: 'Ut commodo suscipit',
+                  check: true,
+                },
+                {
+                  text: 'Mauris congue viverra',
+                  check: true,
+                },
+                {
+                  text: 'Nunc non orci ut mi',
+                  check: true,
+                },
+                {
+                  text: 'Nullam vitae tortor',
+                  check: true,
+                },
+                {
+                  text: 'Lorem ipsum dolor sit',
+                  check: true,
+                },
+                {
+                  text: 'Fusce quis vestibulum',
+                  check: true,
+                },
+              ],
+              button: {
+                text: 'Choose professional',
+                ButtonProps: {
+                  as: 'a',
+                  href: 'https://quocs.com',
+                },
+              },
+            },
+          ],
+        }}
+        sections={{
+          ...Pricing.defaultProps.sections.slice(1, 3),
+        }}
+      />
+    </Theme>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={Pricing} />

@@ -1,0 +1,41 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+
+import Theme from '../../index';
+import DownloadFrom from '../../components/DownloadFrom';
+
+<Meta title="Themes|boss-care/Components/DownloadFrom" component={DownloadFrom} />
+
+# Download From
+
+Simple component with App store / Google play buttons
+
+```js
+import DownloadFrom from '@quocs/themes/src/boss-care/components/DownloadFrom';
+
+<DownloadFrom.AppStore />;
+<DownloadFrom.GooglePlay />;
+```
+
+## App store
+
+<Preview>
+  <Story name="App Store">
+    <Theme>
+      <DownloadFrom.AppStore />
+    </Theme>
+  </Story>
+</Preview>
+
+## Google play
+
+<Preview>
+  <Story name="Google play">
+    <Theme>
+      <DownloadFrom.GooglePlay />
+    </Theme>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={DownloadFrom} />

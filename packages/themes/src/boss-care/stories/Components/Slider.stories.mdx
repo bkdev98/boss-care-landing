@@ -1,0 +1,54 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import Box from '@quocs/common/src/components/Box';
+import Slider from '@quocs/common/src/components/Slider';
+
+import Theme from '../../index';
+
+<Meta title="Themes|boss-care/Components/Slider" component={Slider} />
+
+# Slider
+
+Slider is a carousel of given elements. It's build with slick https://kenwheeler.github.io/slick/.
+
+```js
+import Slider from '@quocs/common/src/components/Slider';
+
+<Slider>
+  <div>Slide A</div>
+  <div>Slide B</div>
+  <div>Slide C</div>
+</Slider>
+```
+
+<Preview>
+  <Story name="Default">
+    <Theme>
+      <Slider options={{
+         dots: true,
+         speed: 500,
+         slidesToShow: 1,
+         centerMode: true,
+         variableWidth: true,
+         arrows: false,
+         slidesToScroll: 1,
+      }}>
+        <div>
+          <Box width="300px" height="150px" flexBox alignItems="center" justifyContent="center" color="gray.7" bg="primary">Slide A</Box>
+        </div>
+        <div>
+          <Box width="300px" height="150px" flexBox alignItems="center" justifyContent="center" color="gray.7" bg="secondary">Slide B</Box>
+        </div>
+        <div>
+          <Box width="300px" height="150px" flexBox alignItems="center" justifyContent="center" color="gray.7" bg="tertiary">Slide c</Box>
+        </div>
+      </Slider>
+    </Theme>
+  </Story>
+</Preview>
+
+## Props
+
+It supports also styled-system props.
+
+<Props of={Slider} />
+

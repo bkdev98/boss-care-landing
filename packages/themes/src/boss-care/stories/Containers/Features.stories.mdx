@@ -1,0 +1,101 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+
+import Features from '@quocs/themes/src/boss-care/containers/Features';
+import Feature from '@quocs/themes/src/boss-care/containers/Features/Feature';
+
+import Theme from '../../index';
+import data from '../../data';
+
+<Meta title="Themes|boss-care/Containers/Features" component={Features} />
+
+# Features
+
+## Version A
+
+<Preview>
+  <Story name="Version A">
+    <Theme>
+      <Features />
+    </Theme>
+  </Story>
+</Preview>
+
+## Version B
+
+Restyled using styled props.
+
+<Preview>
+  <Story name="Version B">
+    <Theme>
+      <Features
+        features={[
+          {
+            feature: data.features[3],
+            chunkLength: 3,
+            GridProps: {
+              gridTemplateAreas: {
+                _: '"caption" "photo" "features" "additional-features"',
+                lg: '"caption caption caption" "features photo additional-features"',
+              },
+              gridColumnGap: '30px',
+              gridRowGap: '50px',
+              gridTemplateColumns: {
+                _: '1fr',
+                lg: '1fr 375px 1fr',
+              },
+            },
+            CaptionProps: {
+              ...Feature.defaultProps.CaptionProps,
+              maxWidth: '770px',
+              justifySelf: 'center',
+              textAlign: 'center',
+            },
+            TextProps: {
+              variant: 'body1',
+              color: 'gray.1',
+            },
+            ListProps: {
+              gridArea: 'features',
+              alignSelf: 'center',
+              textAlign: {
+                _: 'left',
+                lg: 'right',
+              },
+            },
+            AdditionalListProps: {
+              gridArea: 'additional-features',
+              textAlign: 'left',
+            },
+          },
+          {
+            ...Features.defaultProps.features[2],
+            CaptionProps: {
+              order: 1,
+              mb: 80,
+              flex: {
+                _: '0 0 1',
+                lg: '0 0 340px',
+              },
+            },
+            GridProps: {
+              gridTemplateAreas: {
+                _: '"caption" "features"',
+                lg: '"features caption"',
+              },
+              gridColumnGap: '60px',
+              gridTemplateColumns: {
+                _: '1fr',
+                lg: 'auto 340px',
+              },
+              alignItems: 'center',
+            },
+          },
+        ]}
+      />
+    </Theme>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={Features} />

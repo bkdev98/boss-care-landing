@@ -1,0 +1,47 @@
+{
+  "name": "@quocs/gatsby",
+  "private": true,
+  "description": "",
+  "version": "1.0.0",
+  "author": "BossCare Team",
+  "dependencies": {
+    "babel-plugin-styled-components": "1.10.7",
+    "dotenv": "8.2.0",
+    "gatsby": "2.23.3",
+    "gatsby-image": "2.4.7",
+    "gatsby-plugin-google-analytics": "2.3.4",
+    "gatsby-plugin-manifest": "2.4.11",
+    "gatsby-plugin-offline": "3.2.9",
+    "gatsby-plugin-portal": "1.0.7",
+    "gatsby-plugin-react-helmet": "3.3.4",
+    "gatsby-plugin-sharp": "2.6.11",
+    "gatsby-plugin-styled-components": "3.3.4",
+    "gatsby-source-filesystem": "2.3.11",
+    "gatsby-transformer-sharp": "2.5.5",
+    "prop-types": "15.7.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-helmet": "6.1.0",
+    "react-sticky-el": "^2.0.5",
+    "styled-components": "5.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "16.9.36",
+    "prettier": "2.0.5",
+    "typescript": "3.9.5"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build --prefix-paths",
+    "dev": "gatsby develop",
+    "now-dev": "gatsby develop -p $PORT --prefix-paths",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run serve",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
